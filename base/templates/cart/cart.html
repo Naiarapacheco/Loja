@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+
+<title>{% block title %}Meu carrinho | {% endblock %}</title>
+
+{% block content %}
+<div class="max-w-6xl mx-auto flex flex-wrap items-start py-6 px-6 xl:px-0">
+
+    <div class="products w-full lg:w-3/4">
+
+        {% for item in carrinho %}
+
+        <div class="product mb-6 flex pr-6">
+            <a href="#" class="w-1/4">
+                <img src="{{ item.produto.get_thumbnail }}" alt="image" class="hover:shadow-lg rounded-xl">
+            </a>
+
+            <div class="w-3/4 pl-6">
+                <div class="flex justify-between">
+                    <a href="" class="text-lg">{{ item.produto.nome }}</a>
+
+                    <span class="mb-6 pt-1 text-gray-400">R${{ item.preco_total }}</span>
+                </div>
+
+                <hr>
+
+                <div class="quantity mt-6 flex items-center space-x-4">
+                    <a href="#" class="p-3 bg-gray-100">-</a>
+                    <span>{{ item.quantidade }}</span>
+                    <a href="#" class="p-3 bg-gray-100">+</a>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="summary w-1/4 p-6 bg-gray-100 rounded-xl mt-3">
+        <h2 class="uppercase text-lg mb-5">
+            Sumário
+        </h2>
+
+        <div class="mb-6 flex justify-between">
+            <span class="font-semibold">Total</span>
+            <span>${{ carrinho.get_total_compra }}</span>
+        </div>
+
+        <a href="{% url 'checkout' %}"
+            class="inline-block px-8 py-4 rounded-xl bg-yellow-600 hover:bg-yellow-500 text-white">
+            Finalizar compra
+        </a>
+    </div>
+
+</div>
+{% endblock %}

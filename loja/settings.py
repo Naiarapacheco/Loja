@@ -15,6 +15,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+
+SESSION_COOKIE_AGE = 86400 #how long the objects will be put in the cart before they are automatically removed.
+CART_SESSION_ID = 'carrinho' #it's a way to separate this session id from other sessions if you're gonna use that.
 
 # Application definition
 
@@ -52,6 +58,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'base.context_processors.carrinho',
             ],
         },
     },
@@ -68,7 +76,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'meuprojeto_db',         
         'USER': 'root',                  
-        'PASSWORD': '1234',
+        'PASSWORD': 'Nay1234',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -109,7 +117,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
