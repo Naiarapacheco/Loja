@@ -34,17 +34,17 @@ git clone https://github.com/Naiarapacheco/Loja.git
 pip install -r requirements.txt
 ```
 
-4. **Aplique as migrações**
+3. **Aplique as migrações**
 ```bash
 python manage.py migrate
 ```
 
-5. **Crie um superusuário**
+4. **Crie um superusuário**
 ```bash
 python manage.py createsuperuser
 ```
 
-6. **Inicie o servidor de desenvolvimento**
+5. **Inicie o servidor de desenvolvimento**
 ```bash
 python manage.py runserver 
 ```
