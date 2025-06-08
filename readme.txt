@@ -4,6 +4,7 @@ Este projeto é uma aplicação de e-commerce desenvolvida com Django.
 Ele permite o cadastro e exibição de produtos de informática, organização por categorias, filtragem e busca, 
 além de um sistema de carrinho de compras e checkout.
 
+
 ## Funcionalidades
 
 - **Cadastro de Usuário**: Registro, login e logout.
