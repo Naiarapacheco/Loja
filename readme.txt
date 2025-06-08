@@ -1,4 +1,4 @@
-Loja Virtual com Django
+Loja Virtual com django
 
 Este projeto é uma aplicação de e-commerce desenvolvida com Django. 
 Ele permite o cadastro e exibição de produtos de informática, organização por categorias, filtragem e busca, 
@@ -13,7 +13,7 @@ além de um sistema de carrinho de compras e checkout.
 - **Carrinho de Compras**: Adicione, visualize e remova produtos via sessão.
 
 
-## Tecnologias Utilizadas
+## Tecnologias utilizadas
 
 - **Django**: Framework web principal.
 - **Pillow**: Manipulação de imagens e criação de thumbnails.
